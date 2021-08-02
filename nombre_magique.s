@@ -15,3 +15,15 @@
         mov eax, 0xCAFEBABE         ; place the number 0xCAFEBABE in the register eax
     .loop:
         jmp .loop                   ; loop forever
+
+
+;    genisoimage -R                              \
+;                -b boot/grub/stage2_eltorito    \
+;                -no-emul-boot                   \
+;                -boot-load-size 4               \
+;                -A os                           \
+;                -input-charset utf8             \
+;                -quiet                          \
+;                -boot-info-table                \
+;                -o os.iso                       \
+;                iso
